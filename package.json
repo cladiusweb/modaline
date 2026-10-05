@@ -1,0 +1,13 @@
+{
+  "name": "modaline",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix apps/web",
+    "dev:web": "npm run dev --prefix apps/web",
+    "dev:api": "npm run dev --prefix apps/api",
+    "build": "npm run build --prefix apps/web",
+    "build:web": "npm run build --prefix apps/web",
+    "build:api": "npm run build --prefix apps/api"
+  }
+}

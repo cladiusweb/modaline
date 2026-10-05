@@ -1,0 +1,89 @@
+<svg width="1200" height="380" viewBox="0 0 1200 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b" />
+      <stop offset="50%" stop-color="#141416" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+
+    <!-- Subtle Gold Accent Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C9B8A3" />
+      <stop offset="50%" stop-color="#F2E8DC" />
+      <stop offset="100%" stop-color="#C9B8A3" />
+    </linearGradient>
+
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D7CBB5" stop-opacity="0" />
+      <stop offset="50%" stop-color="#D7CBB5" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#D7CBB5" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="380" rx="16" fill="url(#bgGrad)" />
+  <rect width="1198" height="378" x="1" y="1" rx="15" stroke="#27272a" stroke-width="1.5" />
+
+  <!-- Subtle Couture Geometric Grid Backdrop -->
+  <circle cx="600" cy="190" r="170" stroke="#27272a" stroke-width="1" stroke-dasharray="4 6" opacity="0.3" />
+  <circle cx="600" cy="190" r="230" stroke="#27272a" stroke-width="1" stroke-dasharray="2 8" opacity="0.2" />
+
+  <!-- Top Accent Tagline -->
+  <text x="600" y="75" text-anchor="middle" font-family="'Cinzel', 'Playfair Display', Georgia, serif" font-size="12" font-weight="500" fill="#A1A1AA" letter-spacing="7">
+    ZARA &amp; MANGO ESTHETICS • QUIET LUXURY E-COMMERCE
+  </text>
+  
+  <line x1="420" y1="95" x2="780" y2="95" stroke="url(#lineGrad)" stroke-width="1" />
+
+  <!-- Haute Couture Monogram Symbol (Interlocking M & L) -->
+  <g transform="translate(565, 110)">
+    <circle cx="35" cy="35" r="32" stroke="#D7CBB5" stroke-width="1.2" stroke-opacity="0.35" />
+    <g stroke="#FAF9F6" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="20" y1="20" x2="20" y2="50" stroke-width="3" />
+      <line x1="25" y1="20" x2="25" y2="50" stroke-width="1.8" stroke-opacity="0.75" />
+      <polyline points="25,22 35,40 45,22" stroke-width="3" />
+      <line x1="45" y1="20" x2="45" y2="50" stroke-width="1.8" stroke-opacity="0.75" />
+      <line x1="50" y1="20" x2="50" y2="50" stroke-width="3" />
+      <path d="M 31,50 C 31,41 37,33 43,33 C 49,33 49,41 43,47 L 54,47" stroke-width="2.8" stroke="#D7CBB5" />
+    </g>
+  </g>
+
+  <!-- Brand Wordmark -->
+  <text x="600" y="225" text-anchor="middle" font-family="'Playfair Display', 'Cinzel', Didot, Georgia, serif" font-size="44" font-weight="500" fill="#FAF9F6" letter-spacing="14" filter="url(#shadow)">
+    MODALINE
+  </text>
+
+  <!-- Brand Atelier Sub-label -->
+  <text x="600" y="255" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="400" fill="#C9B8A3" letter-spacing="9">
+    ATELIER • READY-TO-WEAR &amp; HAUTE COUTURE
+  </text>
+
+  <line x1="300" y1="285" x2="900" y2="285" stroke="url(#lineGrad)" stroke-width="1" />
+
+  <!-- Modern Tech Badges Floating Pill -->
+  <g transform="translate(600, 325)">
+    <!-- Pill Container -->
+    <rect x="-380" y="-18" width="760" height="36" rx="18" fill="#18181b" stroke="#3f3f46" stroke-width="1" />
+    <text x="0" y="5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#E4E4E7">
+      <tspan fill="#38BDF8">Next.js 14</tspan>
+      <tspan fill="#71717A"> • </tspan>
+      <tspan fill="#61DAFB">React 18</tspan>
+      <tspan fill="#71717A"> • </tspan>
+      <tspan fill="#3178C6">TypeScript</tspan>
+      <tspan fill="#71717A"> • </tspan>
+      <tspan fill="#38BDF8">Tailwind CSS</tspan>
+      <tspan fill="#71717A"> • </tspan>
+      <tspan fill="#EAB308">Zustand</tspan>
+      <tspan fill="#71717A"> • </tspan>
+      <tspan fill="#68A063">Node &amp; Express</tspan>
+      <tspan fill="#71717A"> • </tspan>
+      <tspan fill="#47A248">Mongoose</tspan>
+    </text>
+  </g>
+</svg>
