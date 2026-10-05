@@ -42,3 +42,5 @@ mongoose
 app.listen(PORT, () => {
   console.log(`✓ ModaLine API sunucusu http://localhost:${PORT} üzerinde çalışıyor.`);
 });
+
+export default app;

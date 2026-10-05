@@ -1,6 +1,35 @@
 import { Product } from "@/types";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1";
+/**
+ * Resolves API URLs using Vercel Service Bindings.
+ * In Vercel Services, the calling service (`web`) receives the target (`api`)
+ * base URL through the bound environment variable `process.env.API_URL`.
+ * Falls back to NEXT_PUBLIC_API_URL or local default when running outside Vercel.
+ */
+export function getApiEndpoint(endpoint: string, queryParams?: URLSearchParams | Record<string, string>): URL {
+  const base = process.env.API_URL || process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+  const normalizedBase = base.endsWith("/") ? base : `${base}/`;
+  const cleanEndpoint = endpoint.startsWith("/") ? endpoint.slice(1) : endpoint;
+
+  let url: URL;
+  if (base.includes("/api/v1")) {
+    const subPath = cleanEndpoint.startsWith("api/v1/") ? cleanEndpoint.slice(7) : cleanEndpoint;
+    url = new URL(subPath, normalizedBase);
+  } else {
+    const fullPath = cleanEndpoint.startsWith("api/v1") ? cleanEndpoint : `api/v1/${cleanEndpoint}`;
+    url = new URL(fullPath, normalizedBase);
+  }
+
+  if (queryParams) {
+    const params = queryParams instanceof URLSearchParams ? queryParams : new URLSearchParams(queryParams);
+    params.forEach((val, key) => {
+      if (val) url.searchParams.set(key, val);
+    });
+  }
+
+  return url;
+}
+
 
 // Embedded seed products for seamless zero-dependency frontend operation
 export const FALLBACK_PRODUCTS: Product[] = [
@@ -273,8 +302,8 @@ export const FALLBACK_PRODUCTS: Product[] = [
 
 export async function fetchProducts(filters?: Record<string, string>): Promise<Product[]> {
   try {
-    const params = new URLSearchParams(filters);
-    const res = await fetch(`${API_BASE_URL}/products?${params.toString()}`, {
+    const targetUrl = getApiEndpoint("products", filters);
+    const res = await fetch(targetUrl, {
       next: { revalidate: 60 }
     });
     if (!res.ok) throw new Error("API error");
@@ -307,7 +336,8 @@ export async function fetchProducts(filters?: Record<string, string>): Promise<P
 
 export async function fetchProductBySlug(slug: string): Promise<Product | null> {
   try {
-    const res = await fetch(`${API_BASE_URL}/products/${slug}`, {
+    const targetUrl = getApiEndpoint(`products/${slug}`);
+    const res = await fetch(targetUrl, {
       next: { revalidate: 60 }
     });
     if (!res.ok) throw new Error("API error");
