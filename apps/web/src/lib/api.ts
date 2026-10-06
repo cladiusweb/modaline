@@ -59,9 +59,9 @@ export const FALLBACK_PRODUCTS: Product[] = [
         colorHex: "#D7CBB5",
         slugSuffix: "kemik-beji",
         images: [
-          { url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1400", isFeatured: true },
-          { url: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200" },
-          { url: "https://images.unsplash.com/photo-1550614000-4895a10e1bfd?q=80&w=1200" }
+          { url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1200", isFeatured: true },
+          { url: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=1200" },
+          { url: "https://images.unsplash.com/photo-1550614000-4895a10e1bfd?auto=format&fit=crop&q=80&w=1200" }
         ],
         sizes: [
           { size: "XS", sku: "BLZ-KEM-XS", stock: 3 },
@@ -76,8 +76,8 @@ export const FALLBACK_PRODUCTS: Product[] = [
         colorHex: "#1C1C1C",
         slugSuffix: "komur-siyahi",
         images: [
-          { url: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1200", isFeatured: true },
-          { url: "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1200" }
+          { url: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&q=80&w=1200", isFeatured: true },
+          { url: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=1200" }
         ],
         sizes: [
           { size: "XS", sku: "BLZ-SIY-XS", stock: 4 },
@@ -115,8 +115,8 @@ export const FALLBACK_PRODUCTS: Product[] = [
         colorHex: "#C9B8A3",
         slugSuffix: "bej-melanj",
         images: [
-          { url: "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1200", isFeatured: true },
-          { url: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=1200" }
+          { url: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=1200", isFeatured: true },
+          { url: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&q=80&w=1200" }
         ],
         sizes: [
           { size: "XS", sku: "PNT-BEJ-XS", stock: 5 },
@@ -155,8 +155,8 @@ export const FALLBACK_PRODUCTS: Product[] = [
         colorHex: "#174232",
         slugSuffix: "zumrut-yesili",
         images: [
-          { url: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=1200", isFeatured: true },
-          { url: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=1200" }
+          { url: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&q=80&w=1200", isFeatured: true },
+          { url: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&q=80&w=1200" }
         ],
         sizes: [
           { size: "XS", sku: "DRS-ZUM-XS", stock: 2 },
@@ -171,7 +171,7 @@ export const FALLBACK_PRODUCTS: Product[] = [
         colorHex: "#F2E8DC",
         slugSuffix: "sampanya",
         images: [
-          { url: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200", isFeatured: true }
+          { url: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=80&w=1200", isFeatured: true }
         ],
         sizes: [
           { size: "XS", sku: "DRS-SMP-XS", stock: 3 },
@@ -209,7 +209,7 @@ export const FALLBACK_PRODUCTS: Product[] = [
         colorHex: "#FDFBF7",
         slugSuffix: "inci-beyazi",
         images: [
-          { url: "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?q=80&w=1200", isFeatured: true }
+          { url: "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&q=80&w=1200", isFeatured: true }
         ],
         sizes: [
           { size: "XS", sku: "TOP-INC-XS", stock: 4 },
@@ -247,8 +247,8 @@ export const FALLBACK_PRODUCTS: Product[] = [
         colorHex: "#995C3C",
         slugSuffix: "karina-taba",
         images: [
-          { url: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1200", isFeatured: true },
-          { url: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200" }
+          { url: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=1200", isFeatured: true },
+          { url: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=1200" }
         ],
         sizes: [
           { size: "XS", sku: "CT-TAB-XS", stock: 2 },
@@ -286,7 +286,7 @@ export const FALLBACK_PRODUCTS: Product[] = [
         colorHex: "#E2D8C9",
         slugSuffix: "ham-keten",
         images: [
-          { url: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=1200", isFeatured: true }
+          { url: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&q=80&w=1200", isFeatured: true }
         ],
         sizes: [
           { size: "XS", sku: "VST-HAM-XS", stock: 4 },

@@ -63,9 +63,10 @@ export function QuickViewModal() {
         {/* Görsel */}
         <div className="relative aspect-[3/4] md:aspect-auto md:h-full bg-neutral-100 min-h-[350px]">
           <Image
-            src={activeColor.images[0]?.url || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1400"}
+            src={activeColor?.images?.[0]?.url || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1200"}
             alt={product.title}
             fill
+            unoptimized
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
           />

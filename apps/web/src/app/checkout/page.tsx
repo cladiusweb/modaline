@@ -341,7 +341,13 @@ export default function CheckoutPage() {
                   items.map((item) => (
                     <div key={item.id} className="flex gap-3 text-xs">
                       <div className="relative w-14 h-18 bg-neutral-100 shrink-0">
-                        <Image src={item.image} alt={item.title} fill className="object-cover" />
+                        <Image
+                          src={item.image || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400"}
+                          alt={item.title}
+                          fill
+                          unoptimized
+                          className="object-cover"
+                        />
                       </div>
                       <div className="flex-1">
                         <h4 className="font-medium text-neutral-900 line-clamp-1">{item.title}</h4>

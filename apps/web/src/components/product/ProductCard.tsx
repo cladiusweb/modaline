@@ -16,9 +16,9 @@ export function ProductCard({ product }: ProductCardProps) {
   const [activeVariantIdx, setActiveVariantIdx] = useState(0);
   const setQuickViewProduct = useCartStore((state) => state.setQuickViewProduct);
 
-  const activeVariant = product.variants[activeVariantIdx] || product.variants[0];
-  const primaryImage = activeVariant.images[0]?.url || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1400";
-  const secondaryImage = activeVariant.images[1]?.url || primaryImage;
+  const activeVariant = product?.variants?.[activeVariantIdx] || product?.variants?.[0] || { images: [] };
+  const primaryImage = activeVariant?.images?.[0]?.url || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1200";
+  const secondaryImage = activeVariant?.images?.[1]?.url || primaryImage;
 
   return (
     <div className="group flex flex-col relative">
@@ -30,6 +30,7 @@ export function ProductCard({ product }: ProductCardProps) {
             src={primaryImage}
             alt={product.title}
             fill
+            unoptimized
             className="object-cover transition-opacity duration-700 ease-in-out group-hover:opacity-0"
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
           />
@@ -38,6 +39,7 @@ export function ProductCard({ product }: ProductCardProps) {
             src={secondaryImage}
             alt={`${product.title} alternatif`}
             fill
+            unoptimized
             className="object-cover absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
           />

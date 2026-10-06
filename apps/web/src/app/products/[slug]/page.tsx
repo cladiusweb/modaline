@@ -50,7 +50,7 @@ export default function ProductDetailPage() {
       },
       selectedSize: selectedSize,
       sku: activeSizeObj.sku,
-      image: activeColor.images[0]?.url || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1400",
+      image: activeColor?.images?.[0]?.url || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1200",
       quantity: 1,
       maxStock: activeSizeObj.stock
     });
@@ -89,6 +89,7 @@ export default function ProductDetailPage() {
                     alt={`${product.title} - Görsel ${idx + 1}`}
                     fill
                     priority={idx === 0}
+                    unoptimized
                     className="object-cover hover:scale-105 transition-transform duration-700 ease-out"
                     sizes="(max-width: 1024px) 100vw, 60vw"
                   />
@@ -297,9 +298,10 @@ export default function ProductDetailPage() {
                 <div key={lookItem.id} className="group flex flex-col">
                   <Link href={`/products/${lookItem.slug}`} className="relative aspect-[3/4] bg-neutral-100 overflow-hidden mb-3">
                     <Image
-                      src={lookItem.variants[0]?.images[0]?.url || ""}
+                      src={lookItem.variants?.[0]?.images?.[0]?.url || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1200"}
                       alt={lookItem.title}
                       fill
+                      unoptimized
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                       sizes="(max-width: 768px) 50vw, 25vw"
                     />

@@ -13,7 +13,7 @@ const HERO_SLIDES = [
     description: "Usta terzilik, heykelsi omuz vatkaları ve İtalyan dokuma yünlerle tasarlanan zamansız formlar.",
     primaryBtn: { text: "Yeni Koleksiyon", href: "/collections/yeni-gelenler" },
     secondaryBtn: { text: "Lookbook İncele", href: "/collections/tum-urunler" },
-    image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2600",
+    image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80&w=2000",
     label: "01",
     objectPosition: "object-[center_25%]"
   },
@@ -24,7 +24,7 @@ const HERO_SLIDES = [
     description: "Mevsim ötesi zarafet ve gündüzden geceye zahmetsiz akış sağlayan heykelsi kabanlar ve trençkotlar.",
     primaryBtn: { text: "Kaban & Dış Giyim", href: "/collections/kaban-mont" },
     secondaryBtn: { text: "Kapsül Gardırop", href: "/collections/tum-urunler" },
-    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2600",
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=2000",
     label: "02",
     objectPosition: "object-[center_15%]"
   },
@@ -35,7 +35,7 @@ const HERO_SLIDES = [
     description: "Doğal ışıltılı saf dut ipeği saten elbiseler. Monokrom asalet, derin sırt dekolteleri ve kusursuz drapeler.",
     primaryBtn: { text: "Elbise & Takım", href: "/collections/elbise" },
     secondaryBtn: { text: "Özel Davetler", href: "/collections/tum-urunler" },
-    image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=2600",
+    image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=80&w=2000",
     label: "03",
     objectPosition: "object-[center_20%]"
   }
@@ -81,15 +81,16 @@ export function HeroSection() {
               src={slide.image}
               alt={slide.title}
               fill
-              priority={idx === 0}
-              className={`object-cover ${slide.objectPosition} filter brightness-[0.88] ${
+              priority
+              unoptimized
+              className={`object-cover ${slide.objectPosition} filter brightness-[0.95] contrast-[1.02] ${
                 idx === current ? "animate-kenburns" : ""
               }`}
               sizes="100vw"
             />
-            {/* Güçlü Çift Yönlü Editoryal Gradyan (Sol taraftaki metinlerin her zaman net okunmasını sağlar) */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/20" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/40" />
+            {/* Editoryal Gradyan: Mobilde alttan yukarı dengeli geçiş, PC'de soldan sağa editoryal derinlik */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10 sm:bg-gradient-to-r sm:from-black/80 sm:via-black/40 sm:to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
           </div>
         </div>
       ))}

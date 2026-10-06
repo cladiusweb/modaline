@@ -107,9 +107,10 @@ export function CartSheet() {
               <div key={item.id} className="flex gap-4 group border-b border-neutral-100 pb-5 last:border-b-0">
                 <div className="relative w-20 h-28 bg-neutral-100 shrink-0 overflow-hidden">
                   <Image
-                    src={item.image}
+                    src={item.image || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600"}
                     alt={item.title}
                     fill
+                    unoptimized
                     className="object-cover"
                     sizes="80px"
                   />

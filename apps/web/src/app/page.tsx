@@ -11,43 +11,43 @@ const CATEGORIES = [
     name: "Kaban & Dış Giyim",
     subtitle: "Saf Kaşmir & Yün Karışımları",
     slug: "kaban-mont",
-    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1400",
+    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=1200",
     itemCount: "18 Silüet"
   },
   {
     name: "Elbise & Akşam Takımları",
     subtitle: "Dökümlü İpek & Verev Kesim",
     slug: "elbise",
-    image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1400",
+    image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=80&w=1200",
     itemCount: "24 Silüet"
   },
   {
     name: "Terzilik & Blazerlar",
     subtitle: "Heykelsi Form & Düşük Omuz",
     slug: "ceket-blazer",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1400",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1200",
     itemCount: "14 Silüet"
   }
 ];
 
 const LOOKBOOK_GALLERY = [
   {
-    image: "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&q=80&w=1000",
     tag: "@modalinestudio #SessizLuks",
     caption: "Saf Dokular & Monokrom Akış"
   },
   {
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=1000",
     tag: "@modalinestudio #Editorial",
     caption: "Mevsim Ötesi Terzilik"
   },
   {
-    image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=1000",
     tag: "@modalinestudio #Atelier",
     caption: "Geniş Paça & Dökümlü Form"
   },
   {
-    image: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&q=80&w=1000",
     tag: "@modalinestudio #GeceIhtisami",
     caption: "Saten Dokular & Akışkanlık"
   }
@@ -109,6 +109,7 @@ export default async function HomePage() {
                 src={cat.image}
                 alt={cat.name}
                 fill
+                unoptimized
                 className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
@@ -165,9 +166,10 @@ export default async function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 bg-neutral-100 overflow-hidden">
           <div className="lg:col-span-7 relative aspect-[4/3] lg:aspect-auto lg:min-h-[600px] bg-neutral-200">
             <Image
-              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1600"
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=1600"
               alt="ModaLine Editorial"
               fill
+              unoptimized
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 60vw"
             />
@@ -211,6 +213,7 @@ export default async function HomePage() {
                 src={item.image}
                 alt="Lookbook İlham"
                 fill
+                unoptimized
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 50vw, 25vw"
               />
